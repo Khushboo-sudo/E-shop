@@ -1,0 +1,16 @@
+ .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+} 
+ .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .img img{
+    height: 400px;
+    font-weight: 400px;
+    
+ }

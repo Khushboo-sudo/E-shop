@@ -1,24 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Cart from './component/Cart'
 import Navbar from './component/Navbar'
 import Products from './component/Products'
 import ProductDetails from './component/ProductDetails'
 import Searchitems from './component/Searchitems'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { items } from './component/ItemsData'
+
 
 function App() {
+  const [data,setdata]= useState([...items])
   return (
-    <div>
-      <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route Path='/' element={< Products/>}/>
-        <Route Path='/product/:id' element={< ProductDetails/>}/>
-        <Route Path='/search/:term' element={<Searchitems />}/>   
-        <Route Path='/Cart' element={< Cart/>}/>
-           </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+    <BrowserRouter>
+    <Navbar setdata={setdata}/>
+    <Routes>
+      <Route path='/' element={<Products items={data}/>}/>
+      <Route path='/product/:id' element={<ProductDetails/>}/>
+      <Route path='/search/:term' element={<Searchitems/>}/>
+      <Route path='/cart' element={<Cart/>}/>
+
+    </Routes>
+    </BrowserRouter>
+    
+     
+      </>
   )
 }
 

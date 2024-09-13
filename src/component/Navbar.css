@@ -1,0 +1,53 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #48cfcb;
+  padding: 5px;
+  color: white;
+}
+.brand-name {
+  width: 20%;
+  font-weight: bolder;
+  text-align: center;
+   text-decoration:none ;
+   color: white;
+}
+
+.search-bar {
+  width: 60%;
+  display: grid;
+  place-items: center;
+}
+.search-bar input {
+ 
+  width: 50%;
+  border-radius: 5px;
+}
+.cart-logo {
+  width: 20%;
+  text-align: center;
+  text-decoration:none ;
+   color: white;
+
+}
+input::placeholder{
+  padding: -10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-bar-wrapper {
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  background-color: #229799;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+ 
+}
+.nav-bar-wrapper :hover{
+  text-decoration: underline;
+  color: goldenrod;
+}
